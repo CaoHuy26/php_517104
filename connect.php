@@ -1,7 +1,7 @@
 <?php
   $servername = "127.0.0.1";
   $username = "root";
-  $password = "12345678";
+  $password = "123456";
   $database = 'php_517104';
 
   // Create connection
