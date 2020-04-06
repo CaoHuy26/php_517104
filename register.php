@@ -41,6 +41,12 @@
         if ($password != $re_password) {
           echo "Mật khẩu nhập lại không đúng";
         }
+        else if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $username)) {
+          echo "Tài khoản không được chứa ký tự đặc biệt";
+        }
+        else if (strlen($password) < 8) {
+          echo "Mật khẩu phải > 8 ký tự";
+        }
         else {
           // Check upload image
           $imagePath = "uploads/" .$_FILES["image"]["name"];
