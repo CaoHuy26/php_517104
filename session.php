@@ -11,10 +11,11 @@
     $row = mysqli_fetch_array($run);
   
     echo $row['fullname'];
-    ?>
-    <img src='./uploads/<?php echo $row['image'] ?>' width="50px" height="50px"/>
+?>
+<img src='./uploads/<?php echo $row['image'] ?>' width="50px" height="50px"/>
+  <?php }?>
 
-    <?php
-      echo "<a href='/logout'>Thoát</a>";
-  }
-    ?>
+<?php
+  echo "<br><a href='logout.php'>Thoát</a>";
+  echo "<a href='changePass.php'>Đổi mật khẩu</a>";
+?>
