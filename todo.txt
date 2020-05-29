@@ -1,0 +1,3 @@
+Trang chủ: Danh sách chuyên mục ứng với bài viết
+Đăng ký -> Đăng nhập -> Bình luận vào bài viết thuộc chuyên mục đó
+Đăng nhập với quyền admin thì được phép thêm bài viết, thêm chuyên mục, sửa bài viết, xoá bài viết, xoá bình luận

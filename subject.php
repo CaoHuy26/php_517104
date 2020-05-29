@@ -1,3 +1,5 @@
+<?php include('./connect.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,18 @@
     <br>
     ID: <input type="text" name="id"/>
     <br>
-    Class: <input type="text" name="class"/>
+    Class:
+    <select type="text" name="class">
+      <?php
+        $queryClass = "SELECT * FROM class";
+        $runQueryClass = mysqli_query($conn, $queryClass);
+        if ($runQueryClass) {
+          while ($rowClass = mysqli_fetch_array($runQueryClass)) {
+      ?>
+            <option value="<?php echo $rowClass["id"]?>"><?php echo $rowClass["name"]?></option>
+      <?php }
+        } ?>
+    </select>
     <br>
     Subject:
     <br>
@@ -31,7 +44,6 @@
   </form>
 
   <?php
-    include('./connect.php');
     if (isset($_POST['submit'])) {
       $name = $_POST['name'];
       $id = $_POST['id'];
